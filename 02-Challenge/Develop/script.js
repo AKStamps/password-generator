@@ -20,8 +20,35 @@ var charset = {
   symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-=",
   number: "0123456789"
 }
+ 
+var chooseCharacter = [
+  
+  function upperCase() {
+    return charset.upperCase[Math.floor(Math.random() * charset.upperCase.length)];
+  },
+
+  function lowercase() {
+    return charset.lowerCase[Math.floor(Math.random() * charset.lowerCase.length)];
+  },
+
+  function symbol() {
+    return charset.symbol[Math.floor(Math.random() * charset.symbol.length)];
+  },
+
+  function number() {
+    return charset.number[Math.floor(Math.random() * charset.number.length)];
+  }
+
+]
 
 
+function generatePassword() {
+
+ 
+}
+  
+  if 
+}
 
 
 
