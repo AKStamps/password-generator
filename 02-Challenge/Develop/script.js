@@ -41,6 +41,17 @@ var chooseCharacter = [
 
 ]
 
+var confirmUpper = window.prompt("Please click \"OK\" to use Uppercase Letters in your Password")
+
+var confirmLower = window.prompt("Please click \"OK\" to use Lowercase Letters in your Password")
+
+var confirmSymbol = window.prompt("Please click \"OK\" to use Symbols in your Password")
+
+var confirmNumber = window.prompt("Please click \"OK\" to use Numbers in your Password")
+
+
+
+
 
 function generatePassword() {
 
