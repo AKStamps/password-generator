@@ -68,13 +68,22 @@ length = parseInt(prompt("How Many Characters Would You Like Your Password to Be
 if (!length) {
   alert("You Must Enter a Password Length!");
 
+} else if (Number.isInteger(length) == false) {
+  alert("You Must Enter a Numeric Value!");
+  
+
 } else if (length < 8 || length >128) {
   parseInt(alert("Your Password Must Be Between 8 and 128 Characters!"));
 
 } else {
-
+confirmLower;
+confirmNumber;
+confirmSymbol;
+confirmUpper;
   
 };
+
+
 
 
 
