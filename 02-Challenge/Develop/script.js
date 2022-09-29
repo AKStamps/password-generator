@@ -39,27 +39,57 @@ var chooseCharacter = [
     return charset.number[Math.floor(Math.random() * charset.number.length)];
   }
 
-]
+];
 
-var confirmUpper = window.prompt("Please click \"OK\" to use Uppercase Letters in your Password")
+var confirmLower = confirm("Please click \"OK\" to use Lowercase Letters in your Password");
+if (confirmLower == true) {
+  (lowercase() === confirmLower);
 
-var confirmLower = window.prompt("Please click \"OK\" to use Lowercase Letters in your Password")
-
-var confirmSymbol = window.prompt("Please click \"OK\" to use Symbols in your Password")
-
-var confirmNumber = window.prompt("Please click \"OK\" to use Numbers in your Password")
-
-
+};
+var confirmSymbol = confirm("Please click \"OK\" to use Symbols in your Password");
+if (confirmSymbol == true) {
+  (symbol() === confirmSymbol);
+};
+var confirmNumber = confirm("Please click \"OK\" to use Numbers in your Password");
+if (confirmNumber == true) {
+  (number() === confirmNumber);
+};
+var confirmUpper = confirm("Please click \"OK\" to use Uppercase letters in your Password");
+if (confirmUpper == true) {
+  (upperCase() === confirmUpper);
+};
 
 
 
 function generatePassword() {
 
+length = parseInt(prompt("How Many Characters Would You Like Your Password to Be? Minimum of 8 Characters, Maximum of 128"))
+
+if (!length) {
+  alert("You Must Enter a Password Length!");
+
+} else if (length < 8 || length >128) {
+  parseInt(alert("Your Password Must Be Between 8 and 128 Characters!"));
+
+} else {
+
+  
+};
+
+
+
+
+
+  
+
+
+
+
+
+
  
 }
   
-  if 
-}
 
 
 
