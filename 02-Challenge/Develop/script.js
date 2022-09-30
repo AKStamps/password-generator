@@ -40,6 +40,10 @@ function generatePassword() {
   var confirmSymbol = confirm("Press OK to Use Symbols in your Password");
   var confirmNumber = confirm("Press OK to use Numbers in your Password");
 
+  if (confirmUpper === true) {
+    
+  }
+
   
 
   
