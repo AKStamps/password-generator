@@ -40,9 +40,31 @@ function generatePassword() {
   var confirmSymbol = confirm("Press OK to Use Symbols in your Password");
   var confirmNumber = confirm("Press OK to use Numbers in your Password");
 
-  if (confirmUpper === true) {
-    
+  if (confirmLower === false && confirmNumber === false && confirmSymbol === false && confirmUpper === false) {
+    alert("You Must Choose at Least One Character Type!")
+    return;
   }
+
+  var choosenCharacters = []
+
+  if (confirmLower ===true) {
+    choosenCharacters = choosenCharacters.concat(lowerCase)
+  }
+
+  if (confirmUpper === true) {
+    choosenCharacters = choosenCharacters.concat(upperCase)
+  }
+
+  if (confirmNumber === true) {
+    choosenCharacters = choosenCharacters.concat(number)
+  }
+
+  if (confirmSymbol === true) {
+    choosenCharacters = choosenCharacters.concat(symbol)
+  }
+
+  
+
 
   
 
