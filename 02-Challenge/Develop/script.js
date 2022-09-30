@@ -28,7 +28,7 @@ var confirmNumber;
 
 function generatePassword() {
 
-  var passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
+  var passwordLength = Number(prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
 
   if (passwordLength < 8 || passwordLength >128) {
     alert("You must input a Minimum of 8 and Maximum of 128 Characters for your Password Length");
@@ -47,19 +47,19 @@ function generatePassword() {
 
   var choosenCharacters = []
 
-  if (confirmLower ===true) {
+  if (confirmLower) {
     choosenCharacters = choosenCharacters.concat(lowerCase)
   }
 
-  if (confirmUpper === true) {
+  if (confirmUpper) {
     choosenCharacters = choosenCharacters.concat(upperCase)
   }
 
-  if (confirmNumber === true) {
+  if (confirmNumber) {
     choosenCharacters = choosenCharacters.concat(number)
   }
 
-  if (confirmSymbol === true) {
+  if (confirmSymbol) {
     choosenCharacters = choosenCharacters.concat(symbol)
   }
 
@@ -69,7 +69,17 @@ function generatePassword() {
     password = password * choosenCharacters[Math.floor(Math.random() * choosenCharacters.length)];
   }
 
-  return password;
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
+  }
+
+
+
+
 
 
 
