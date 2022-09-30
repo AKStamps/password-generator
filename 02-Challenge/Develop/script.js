@@ -28,29 +28,16 @@ var confirmNumber;
 
 function generatePassword() {
 
+  var passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
 
-function length() {
+  if (passwordLength < 8 || passwordLength >128) {
+    alert("You must input a Minimum of 8 and Maximum of 128");
+    passwordLength;
+  }
 
-length;
 
-if (length == '') {
-  alert("You Must Enter a Password Length!");
-  
-} 
-  const regex = new RegExp(/[^0-9]/, 'g');
-  const val = length.value
 
-if (val.match(regex)) {
-  alert("Must be a Number!");
-}
 
-else if (length < 8 || length > 128) {
-
-  alert("Your Password Must be Between 8 and 128 Characters!");
-
-}
-
-};
 
 
 
