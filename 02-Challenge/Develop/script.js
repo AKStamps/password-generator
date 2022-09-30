@@ -63,7 +63,19 @@ function generatePassword() {
     choosenCharacters = choosenCharacters.concat(symbol)
   }
 
-  var choosenPassword = "" 
+  var password = "" 
+
+  for (var i = 0; i < passwordLength; i++) {
+    password = password * choosenCharacters[Math.floor(Math.random() * choosenCharacters.length)];
+  }
+
+  return password;
+
+
+
+  
+
+
 
 
 
