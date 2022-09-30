@@ -21,10 +21,7 @@ var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var passwordLength = "";
  
-var confirmUpper;
-var confirmLower;
-var confirmSymbol;
-var confirmNumber;
+
 
 function generatePassword() {
 
@@ -47,20 +44,20 @@ function generatePassword() {
 
   var choosenCharacters = []
 
-  if (confirmLower) {
-    choosenCharacters = choosenCharacters.concat(lowerCase)
+  if (confirmLower === true) {
+    choosenCharacters = choosenCharacters.concat(lowerCase);
   }
 
-  if (confirmUpper) {
-    choosenCharacters = choosenCharacters.concat(upperCase)
+  if (confirmUpper === true) {
+    choosenCharacters = choosenCharacters.concat(upperCase);
   }
 
-  if (confirmNumber) {
-    choosenCharacters = choosenCharacters.concat(number)
+  if (confirmNumber === true) {
+    choosenCharacters = choosenCharacters.concat(number);
   }
 
-  if (confirmSymbol) {
-    choosenCharacters = choosenCharacters.concat(symbol)
+  if (confirmSymbol === true) {
+    choosenCharacters = choosenCharacters.concat(symbol);
   }
 
   var password = "" 
@@ -69,13 +66,16 @@ function generatePassword() {
     password = password * choosenCharacters[Math.floor(Math.random() * choosenCharacters.length)];
   }
 
+
   function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
   
     passwordText.value = password;
   
-  }
+  };
+
+};
 
 
 
@@ -117,7 +117,7 @@ function generatePassword() {
 
 
  
-}
+
   
 
 
