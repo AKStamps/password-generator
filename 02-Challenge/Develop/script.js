@@ -63,7 +63,9 @@ function generatePassword() {
     choosenCharacters = choosenCharacters.concat(symbol)
   }
 
-  
+  var choosenPassword = "" 
+
+
 
 
   
