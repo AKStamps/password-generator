@@ -31,9 +31,15 @@ function generatePassword() {
   var passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
 
   if (passwordLength < 8 || passwordLength >128) {
-    alert("You must input a Minimum of 8 and Maximum of 128");
-    passwordLength;
+    alert("You must input a Minimum of 8 and Maximum of 128 Characters for your Password Length");
+    passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
   }
+
+  else if (!passwordLength) {
+    return;
+  }
+
+  
 
 
 
