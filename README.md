@@ -10,4 +10,4 @@ prompts to ask the user how long they would like their password to be and which 
 What I took away from this project is the importance of console logging actions in javascript as I build code.  Had I properly done this initially I would have 
 more than likely avoided a complication related to syntax with the .concat() function.  I also used this project to gain a better understanding of the structuring of javascript files and how to more effectively read them.
 
-[Deployed URL]
+[Deployed URL]( https://akstamps.github.io/password-generator/)
