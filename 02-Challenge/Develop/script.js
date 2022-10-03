@@ -32,6 +32,11 @@ function generatePassword() {
     passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
   }
 
+  if (isNaN(passwordLength)) {
+    alert("You must input a Number!");
+    passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
+  }
+
   var confirmUpper = confirm("Press Ok to use Uppercase Letters in your Password");
   var confirmLower = confirm("Press OK to use Lowercase Letters in your Password");
   var confirmSymbol = confirm("Press OK to Use Symbols in your Password");
