@@ -27,7 +27,7 @@ var passwordLength = "";
 function generatePassword() {
 
   // inital prompt for desired password length
-  var passwordLength = Number(prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
+  var passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
 
   // if user hits cancel it returns to default screen
   if (!passwordLength) {
