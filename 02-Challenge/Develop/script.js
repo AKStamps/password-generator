@@ -27,22 +27,33 @@ function generatePassword() {
 
   var passwordLength = Number(prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
 
-  if (passwordLength < 8 || passwordLength >128) {
-    alert("You must input a Minimum of 8 and Maximum of 128 Characters for your Password Length");
-    passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
+  if (!passwordLength) {
+    return;
   }
 
-  if (isNaN(passwordLength)) {
+  while (passwordLength < 8 || passwordLength > 128) {
+    alert("You must input a Minimum of 8 and Maximum of 128 Characters for your Password Length");
+    passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
+    if (!passwordLength) {
+      return;
+    }
+  }
+
+  while (isNaN(passwordLength)) {
     alert("You must input a Number!");
     passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
-  }
+    if (!passwordLength) {
+      return;
+    }
+  } 
+
 
   var confirmUpper = confirm("Press Ok to use Uppercase Letters in your Password");
   var confirmLower = confirm("Press OK to use Lowercase Letters in your Password");
   var confirmSymbol = confirm("Press OK to Use Symbols in your Password");
   var confirmNumber = confirm("Press OK to use Numbers in your Password");
 
-  if (confirmLower === false && confirmNumber === false && confirmSymbol === false && confirmUpper === false) {
+  while (confirmLower === false && confirmNumber === false && confirmSymbol === false && confirmUpper === false) {
     alert("You Must Choose at Least One Character Type!");
     var confirmUpper = confirm("Press Ok to use Uppercase Letters in your Password");
     var confirmLower = confirm("Press OK to use Lowercase Letters in your Password");
