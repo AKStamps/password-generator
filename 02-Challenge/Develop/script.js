@@ -23,10 +23,9 @@ var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var passwordLength = "";
  
 
-
 function generatePassword() {
 
-  // inital prompt for desired password length
+ // inital prompt for desired password length
   var passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
 
   // if user hits cancel it returns to default screen
@@ -34,24 +33,14 @@ function generatePassword() {
     return;
   }
 
-  // loop which reprompts user to input proper password length when value is more or less than requested length, returns to default if they hit cancel
-  while (passwordLength < 8 || passwordLength > 128) {
-    alert("You must input a Minimum of 8 and Maximum of 128 Characters for your Password Length");
+  // loop which reprompts user to input proper password length when value is more or less than requested length or is not a number, returns to default if they hit cancel
+  while (passwordLength < 8 || passwordLength > 128 || (isNaN(passwordLength))) {
+    alert("You must input a Minimum of 8 and Maximum of 128 Characters for your Password Length and it must be a number!");
     passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
     if (!passwordLength) {
       return;
     }
   }
-
-  // loop which reprompts user to input password length if they input anything other than a number, returns to default if they press cancel
-  while (isNaN(passwordLength)) {
-    alert("You must input a Number!");
-    passwordLength = (prompt("Please Input your Desired Password Length, it must be Between 8 and 128 Characters"));
-    if (!passwordLength) {
-      return;
-    }
-  } 
-
 
   // variables for each chartype confirmation with confirm prompt
   var confirmUpper = confirm("Press Ok to use Uppercase Letters in your Password");
