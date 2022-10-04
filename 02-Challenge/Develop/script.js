@@ -43,10 +43,10 @@ function generatePassword() {
   }
 
   // variables for each chartype confirmation with confirm prompt
-  var confirmUpper = confirm("Press Ok to use Uppercase Letters in your Password");
-  var confirmLower = confirm("Press OK to use Lowercase Letters in your Password");
-  var confirmSymbol = confirm("Press OK to Use Symbols in your Password");
-  var confirmNumber = confirm("Press OK to use Numbers in your Password");
+  var confirmUpper = confirm("Press Ok to use Uppercase Letters in your Password, Press Cancel to Omit Them");
+  var confirmLower = confirm("Press OK to use Lowercase Letters in your Password, Press Cancel to Omit Them");
+  var confirmSymbol = confirm("Press OK to Use Symbols in your Password, Press Cancel to Omit Them");
+  var confirmNumber = confirm("Press OK to use Numbers in your Password, Press Cancel to Omit Them");
 
   // loop which reprompts user for chartype choices if they choose none
   while (confirmLower === false && confirmNumber === false && confirmSymbol === false && confirmUpper === false) {
